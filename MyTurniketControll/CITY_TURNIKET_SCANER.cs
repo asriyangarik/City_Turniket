@@ -92,8 +92,8 @@ namespace MyTurniketControll
 
 
                 string[] words = _ScanerQR.Split(new char[] { ';' });
-                dateTimeChek = words[1];
-                numberChek = words[2];
+                numberChek = words[1];
+                dateTimeChek = words[2];
 
 
 
