@@ -75,6 +75,7 @@ namespace MyTurniketControll
 
 
             thisForm = this;
+            this.WindowState = FormWindowState.Minimized;
 
 
         }
@@ -92,8 +93,8 @@ namespace MyTurniketControll
 
 
                 string[] words = _ScanerQR.Split(new char[] { ';' });
-                numberChek = words[1];
-                dateTimeChek = words[2];
+                dateTimeChek = words[1];
+                numberChek = words[2];
 
 
 
@@ -123,8 +124,8 @@ namespace MyTurniketControll
                 Thread.Sleep(250);
                 MyTurniketRelay.ReleOff(1);
             }
-
-            thisForm.WindowState = FormWindowState.Minimized;
+         
+           // thisForm.WindowState = FormWindowState.Minimized;
 
 
         }
@@ -150,6 +151,11 @@ namespace MyTurniketControll
             }
 
             System.Environment.Exit(0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
