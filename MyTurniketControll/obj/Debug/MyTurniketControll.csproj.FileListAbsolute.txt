@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\bin\Debug\MyTurniketControll.exe.config
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\bin\Debug\MyTurniketControll.exe
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\bin\Debug\MyTurniketControll.pdb
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.Properties.Resources.resources
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.csproj.GenerateResource.cache
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.exe
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.pdb
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\bin\Debug\RelayControll.dll
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\bin\Debug\RelayControll.pdb
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.csproj.CopyComplete
+C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.CITY_TURNIKET_SCANER.resources
