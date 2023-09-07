@@ -9,13 +9,12 @@ namespace MyTurniketControll
 {
     public partial class CITY_TURNIKET_SCANER : Form
     {
-        private static string _ScanerQR = "";
-        static RelayControllCL MyTurniketRelay;
+        private string _ScanerQR = "";
+        RelayControllCL MyTurniketRelay;
         SerialPort mySerialPort;
-        static string OpenEAN;
-        static string ComPort;
-        static string Device;
-        static Form thisForm;
+        string OpenEAN;
+        string ComPort;
+        string Device;
 
 
         public CITY_TURNIKET_SCANER()
@@ -74,16 +73,15 @@ namespace MyTurniketControll
             }
 
 
-            thisForm = this;
             this.WindowState = FormWindowState.Minimized;
 
 
         }
 
-        private static void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
+        private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
-            SerialPort sp = (SerialPort)sender;
-            _ScanerQR = sp.ReadExisting();
+           // SerialPort sp = (SerialPort)sender;
+            _ScanerQR = mySerialPort.ReadLine();
             string Prefix = "SCQR";
 
             if (_ScanerQR.IndexOf(Prefix) == 0)
