@@ -4,3 +4,9 @@ C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\RelayControll\obj
 C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\RelayControll\obj\Debug\RelayControll.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\RelayControll\obj\Debug\RelayControll.dll
 C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\RelayControll\obj\Debug\RelayControll.pdb
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\RelayControll\bin\Debug\RelayControll.dll
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\RelayControll\bin\Debug\RelayControll.pdb
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\RelayControll\obj\Debug\RelayControll.csproj.AssemblyReference.cache
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\RelayControll\obj\Debug\RelayControll.csproj.CoreCompileInputs.cache
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\RelayControll\obj\Debug\RelayControll.dll
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\RelayControll\obj\Debug\RelayControll.pdb

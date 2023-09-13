@@ -12,3 +12,16 @@ C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControl
 C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\bin\Debug\RelayControll.pdb
 C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.csproj.CopyComplete
 C:\Users\User\Desktop\INQNASPASARMAN DLL\TURNIKET\TurniketCITY\MyTurniketControll\obj\Debug\MyTurniketControll.CITY_TURNIKET_SCANER.resources
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\bin\Debug\MyTurniketControll.exe.config
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\bin\Debug\MyTurniketControll.exe
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\bin\Debug\MyTurniketControll.pdb
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\bin\Debug\RelayControll.dll
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\bin\Debug\RelayControll.pdb
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\obj\Debug\MyTurniketControll.csproj.AssemblyReference.cache
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\obj\Debug\MyTurniketControll.CITY_TURNIKET_SCANER.resources
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\obj\Debug\MyTurniketControll.Properties.Resources.resources
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\obj\Debug\MyTurniketControll.csproj.GenerateResource.cache
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\obj\Debug\MyTurniketControll.csproj.CoreCompileInputs.cache
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\obj\Debug\MyTurniketControll.csproj.CopyComplete
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\obj\Debug\MyTurniketControll.exe
+C:\Users\Garik_IT\Desktop\INQNASPASARMAN DLL\TURNIKET\City_Turniket\MyTurniketControll\obj\Debug\MyTurniketControll.pdb
