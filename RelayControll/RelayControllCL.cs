@@ -9,9 +9,10 @@ namespace RelayControll
     public class RelayControllCL
     {
         int _deviceHandle = 0;
-
-
+        static List<usb_relay_device_info> devicesInfos;
         private usb_relay_device_info _mydevice;
+
+
 
         public string MyDeviceInfo()
         {
@@ -29,16 +30,16 @@ namespace RelayControll
 
         }
 
-        public string MyDeviceConnect()
+        public string MyDeviceConnect(string myModel)
         {
             try
             {
                 
 
-                string path = "C:/turniket.txt";
-                StreamReader reader = new StreamReader(path);
-                string myModel = reader.ReadToEnd();
-                myModel = myModel.Substring(0, 7);
+                //string path = "C:/turniket.txt";
+                //StreamReader reader = new StreamReader(path);
+                //string myModel = reader.ReadToEnd();
+                //myModel = myModel.Substring(0, 7);
 
 
 
@@ -82,7 +83,6 @@ namespace RelayControll
 
         }
 
-
         public void MyDeviceDisConnect()
         {
 
@@ -92,6 +92,24 @@ namespace RelayControll
             }
 
         }
+
+        public static List<usb_relay_device_info> MyDeviceNames()
+        {
+
+            devicesInfos = new List<usb_relay_device_info>();
+            usb_relay_device_info deviceInfo = RelayDeviceWrapper.usb_relay_device_enumerate();
+            devicesInfos.Add(deviceInfo);
+
+            while (deviceInfo.next.ToInt32() > 0)
+            {
+                deviceInfo = (usb_relay_device_info)Marshal.PtrToStructure(deviceInfo.next, typeof(usb_relay_device_info));
+                devicesInfos.Add(deviceInfo);
+            }
+            return devicesInfos;
+
+        }
+
+
 
         #region Rele On Off
 

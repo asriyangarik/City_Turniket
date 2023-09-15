@@ -10,11 +10,13 @@ namespace MyTurniketControll
     public partial class CITY_TURNIKET_SCANER : Form
     {
         private string _ScanerQR = "";
+        private string _OldScanerQR;
         RelayControllCL MyTurniketRelay;
         SerialPort mySerialPort;
         string OpenEAN;
         string ComPort;
         string Device;
+        string Prefix = "SCQR";
 
 
         public CITY_TURNIKET_SCANER()
@@ -42,12 +44,13 @@ namespace MyTurniketControll
             ScCOMportTB.Text = ComPort;
 
 
-            string isConnected = MyTurniketRelay.MyDeviceConnect();
+            string isConnected = MyTurniketRelay.MyDeviceConnect(Device);
 
             if (isConnected == "Cannot Connect To devise" || isConnected == "Cannot Connect To devise chek the file")
             {
                 MessageBox.Show(isConnected + " Turniket");
                 CloseAplication();
+                return;
             }
 
             MyTurniketRelay.AllReleOff();
@@ -69,20 +72,30 @@ namespace MyTurniketControll
             {
 
                 MessageBox.Show(e.Message);
+                LogWriter(e.Message);
                 CloseAplication();
             }
 
 
-            this.WindowState = FormWindowState.Minimized;
+            //this.WindowState = FormWindowState.Minimized;
 
 
         }
 
         private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
-           // SerialPort sp = (SerialPort)sender;
-            _ScanerQR = mySerialPort.ReadLine();
-            string Prefix = "SCQR";
+
+            SerialPort sp = (SerialPort)sender;
+            _ScanerQR = sp.ReadExisting();
+            _ScanerQR = _ScanerQR.Trim(new char[] { '\n', ' ', '\r' });
+
+            if (_OldScanerQR == _ScanerQR)
+            {
+                return;
+            }
+            LogWriter(_ScanerQR);
+
+            
 
             if (_ScanerQR.IndexOf(Prefix) == 0)
             {
@@ -113,6 +126,8 @@ namespace MyTurniketControll
                     MyTurniketRelay.ReleOn(1);
                     Thread.Sleep(250);
                     MyTurniketRelay.ReleOff(1);
+
+                    _OldScanerQR = _ScanerQR;
                 }
 
             }
@@ -122,20 +137,16 @@ namespace MyTurniketControll
                 Thread.Sleep(250);
                 MyTurniketRelay.ReleOff(1);
             }
-         
-           // thisForm.WindowState = FormWindowState.Minimized;
+            
+            // thisForm.WindowState = FormWindowState.Minimized;
 
 
         }
 
         private void CITY_TURNIKET_SCANER_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (mySerialPort != null)
-            {
-                mySerialPort.Close();
-                MyTurniketRelay.MyDeviceDisConnect();
-                MyTurniketRelay.AllReleOff();
-            }
+
+            CloseAplication();
 
         }
 
@@ -144,16 +155,78 @@ namespace MyTurniketControll
             if (mySerialPort != null)
             {
                 mySerialPort.Close();
-                MyTurniketRelay.MyDeviceDisConnect();
-                MyTurniketRelay.AllReleOff();
             }
+            if (MyTurniketRelay != null)
+            {
+                MyTurniketRelay.AllReleOff();
+                MyTurniketRelay.MyDeviceDisConnect();
+            }
+            try
+            {
+                System.Environment.Exit(0);
+            }
+            catch (Exception e)
+            {
 
-            System.Environment.Exit(0);
+                LogWriter(e.Message);
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void TestBT_Click(object sender, EventArgs e)
+        {
+            MyTurniketRelay.ReleOn(1);
+            Thread.Sleep(250);
+            MyTurniketRelay.ReleOff(1);
+            LogWriter("TestButton" + "Serial Port is Open: " + mySerialPort.IsOpen.ToString());
+
+
+
+        }
+
+        private void RelayList_Click(object sender, EventArgs e)
+        {
+            var myReleys = RelayControllCL.MyDeviceNames();
+            string Message = "";
+            foreach (var item in myReleys)
+            {
+                Message = Message + item.ToString() + '\n';
+            }
+            MessageBox.Show(Message);
+        }
+
+        private void LogWriter(string text)
+        {
+            text = text.Trim(new char[] { '\n', ' ', '\r' });
+            text = text + "---" + DateTime.Now.ToString() + '\n';
+
+            DirectoryInfo myDir = new DirectoryInfo("turniketLogs");
+            if (!myDir.Exists)
+            {
+                myDir.Create();
+            }
+            FileInfo Logfile = new FileInfo(@"turniketLogs\Turniketlog.txt");    ///stugum enq log fayli arkayutyun@
+
+            if (!Logfile.Exists)
+            {
+                File.Create(@"turniketLogs\Turniketlog.txt");                        ///ete fayl@ chka
+            }
+
+            if (Logfile.CreationTime < DateTime.Now.AddDays(-3))
+            {
+                File.WriteAllText(@"turniketLogs\Turniketlog.txt", text);
+            }
+            else
+            {
+                File.AppendAllText(@"turniketLogs\Turniketlog.txt", text);
+            }
+
+
         }
     }
 }

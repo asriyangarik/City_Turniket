@@ -1,0 +1,4 @@
+TestButtonSerial Port is Open: True DeviceIndo: Ссылка на объект не указывает на экземпляр объекта.---14.09.2023 17:05:52
+TestButtonSerial Port is Open: True---14.09.2023 17:06:42
+TestButtonSerial Port is Open: True---14.09.2023 17:08:22
+2866286628---14.09.2023 17:08:26
